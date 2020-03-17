@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700,900|Open+Sans&display=swap" rel="stylesheet" />
-    <title>Document</title>
+    <title>Evolutionary Spatial Games</title>
 </head>
 <body>
 <div class="container">
@@ -18,7 +18,41 @@
         </div>
         <div class="abstract">
             <h2>Background</h2>
-            <p>Test</p>
+            <p>This page is intended to provide an introduction into Evolutionary Spatial Games. There are some necessary prerequisites that I will go over first. The goal is to be able to replicate some of the interesting patterns discovered by Martin Nowak and Robert May, in the Evolutionary Spatial Games GUI that can be found <a href="https://github.com/marklawrence97/Evolutionary-Spatial-Games" target="blank">here</a>.<p>
+        </div>
+        <div class="Contents">
+            <h2>Contents</h2>
+            <ul>
+                <li>
+                    <a href="#dilemma">The Prisoner's Dilemma</a>          
+                </li>
+                <li>
+                    <a href="#dilemma">Evolutionary Game Theory</a>          
+                </li>
+                <li>
+                    <a href="#dilemma">Cellular Automata</a>          
+                </li>
+                <li>
+                    <a href="#dilemma">Evolutionary Spatial Games</a>          
+                </li>
+            </ul>
+        </div>
+        <div class="abstract">
+            <a name="dilemma"></a>
+            <h2>The Prisoner's Dilemma</h2>
+            <p>
+                Imagine that there are two prisoners both convicted for a joint crime. The prosecutor has insufficient evidence to build a case against either of the prisoners, and so offers each of them a deal. The prisoners are being held in separate rooms and so can’t communicate.                
+            </p>
+            <p>
+                The prosecutor tells each prisoner that if they confess to the crime, providing enough evidence to convict the other prisoner, then they will walk free but leaving their fellow convict to 10 years in prison. However, if both the prisoners choose to confess then they will both have to serve 7 years in prison. If they instead both remain silent, they will be forced to serve a year before they are released.                
+            </p>
+            <p>
+                Now lets define ‘rational’ as acting in a way that will result in the shortest sentence in jail. By this definition the rational decision in this situation is always to confess. This is because if the other prisoner remains silent then the optimum strategy is to confess and walk free, the other case is that the other prisoner confesses and again in this case the best strategy is to confess and serve 7 years.                
+            </p>
+            <p>
+                If both prisoners act rationally and choose to confess then they will end up with a significantly worse outcome than if they cooperated and both remained silent. This is the prisoner’s dilemma.
+            </p>                
+            </p>
         </div>
     </div>
 </div>
