@@ -30,7 +30,7 @@
                     <a href="#gameTheory">Evolutionary Game Theory</a>          
                 </li>
                 <li>
-                    <a href="#dilemma">Cellular Automata</a>          
+                    <a href="#cellularAutomata">Cellular Automata</a>          
                 </li>
                 <li>
                     <a href="#dilemma">Evolutionary Spatial Games</a>          
@@ -68,15 +68,57 @@
                 ering contests between rational decision makers, we suppose that each member of a
                 population assumes a behaviour strategy, then the success of a certain strategy will
                 depend on contests between members of the population.</p>
-            <p>A behaviour strategy in the context of evolutionary game theory means that
-                in certain situations an individual has a predisposition to act in a certain way.
+            <p>Lets define a behaviour strategy as an individual having a predisposition to act in a certain way.
                 It is important to consider the individual as not being consciously aware of the
                 strategy they have adopted, then this provides a way of modelling evolution at the
                 “phenotypic level”. A contest is an interaction
                 between two individuals within the population that provokes them to act in a manner
                 that is dictated by an individuals behavioural phenotype, which we will refer to as
                 an individuals strategy.
-                </p>
+            </p>
+            <p>
+                We can expand the example of the Prisoner’s dilemma into the framework of evolutionary
+                game theory we have outline. In this context the Prisoner’s dilemma provides an interesting
+                metaphor for cooperation in a population. Now instead of having two rational
+                players in a contest, we define there to be a population where individuals can belong
+                to 2 opposing strategies. The first strategy, C, is defined as individuals who will
+                either cooperate and remain silent. The second strategy, D, which we will define as
+                individuals who will defect and confess their crime.
+            </p>
+            <p>
+                Then we can create a payoff matrix of the same structure to the one we saw before in Prisoner’s Dilemma example:
+            </p>
+            <div class="figure">
+                <img src="images/cooperators.png" alt="Prisoners Dilemma Payoff Matrix" style="width: 20%;"/>
+            </div>
+            <p>
+                Now if we let x equal to the proportion of Cooperators in the population, then it follows that the number of Defectors is 1-x. Then we can calculate the fitness of N strategies , by calculating the sum of the proportion of individuals that have adopted strategy N multiplied by the payoff of strategy N. Applying this to the payoff matrix we find the following equations:
+            </p>
+            <div class="figure">
+                <img src="images/payoff.png" alt="Prisoners Dilemma Payoff Matrix" style="width: 50%;"/>
+            </div>
+            <p>
+                Since X will always be greater than or equal to 0 since it is a proportion, these equations show that the fitness of defecting is always greater than the fitness of cooperating. So under the mechanism of natural selection we should expect to see the population converging to a state where all individuals are defectors.
+            </p>
+            <p>
+                This contradicts what we observe in biology where cooperation is abundant, so we
+                find ourselves with the problem of how could altruism have evolved through natural
+                selection when the behaviour strategy of cooperation is so exposed to being exploited
+                by defectors.
+            </p>
+            <a name="cellularAutomata"></a>
+            <h2>Cellular Automata</h2>
+            <p>
+                A cellular automaton is an n-dimensional array containing individual cells that
+                an take a finite number of discrete values. There are a given set of rules dictating
+                what value a cell will take after a discrete time period. These rules are dependent
+                only on a cell’s immediate neighbours.
+            </p>
+            <p>
+                How we wish to define a cell's immediate neighbours is up to us. Two commonly used definitions for a cells neighbourhood is Von 
+                nuemann neighbourhood and a Moore's neighbourhood
+            </p
+            >
         </div>
     </div>
 </div>
