@@ -92,7 +92,7 @@
                 <img src="images/cooperators.png" alt="Prisoners Dilemma Payoff Matrix" style="width: 20%;"/>
             </div>
             <p>
-                Now if we let x equal to the proportion of Cooperators in the population, then it follows that the number of Defectors is 1-x. Then we can calculate the fitness of N strategies , by calculating the sum of the proportion of individuals that have adopted strategy N multiplied by the payoff of strategy N. Applying this to the payoff matrix we find the following equations:
+                Now if we let x equal to the proportion of Cooperators in the population, then it follows that the number of Defectors is 1-x. Then we can calculate the fitness of a strategy N, by calculating the sum of the proportion of individuals that have adopted strategy N multiplied by the payoff of strategy N and the proportion of individuals who have adopted an opposing strategy multiplied by the payoff of that opposing strategy. Applying this to the payoff matrix we find the following equations:
             </p>
             <div class="figure">
                 <img src="images/payoff.png" alt="Prisoners Dilemma Payoff Matrix" style="width: 50%;"/>
@@ -117,8 +117,47 @@
             <p>
                 How we wish to define a cell's immediate neighbours is up to us. Two commonly used definitions for a cells neighbourhood is Von 
                 nuemann neighbourhood and a Moore's neighbourhood
-            </p
-            >
+            </p>
+            <p>
+                To define these two neighbourhoods lets uppose we have a 2 dimensional cellular automata that all have some x coordinate and some y coordinate such that x,y are both real numbers. Then the von nuemann neighbourhood is all values of i and j such that i and j are real numbers and:
+            </p>
+            <div class="figure">
+                <img src="images/nuemann.png" alt="Von Nuemann Conditions" style="width: 50%;"/>
+            </div>
+            <p>
+                The Moore neighbourhood is all values of i and j such that i and j are real numbers and:
+            </p>
+            <div class="figure">
+                <img src="images/moore.png" alt="Moore neighbourhood conditions" style="width: 50%;" />
+            </div>
+            <p>
+                We want to consider only the case when R = 1. These two diagrams depict clearly how the two neighbourhoods differ:
+            </p>
+            <div class="figure">
+                <img src="images/grids.png" alt="Cellular Automata neighbourhood grids"  style="width: 70%"/>
+            </div>
+            <p>
+                There are three 3 different boundary conditions I want to introduce, fixed, reflective and periodic. The first and most simple case is a fixed boundary condition, this means that at the boundary all cells will take a fixed value. This can be depicted using a one dimensional cellular automata: 
+            </p>
+            <div class="figure">
+                <img src="images/fixed.png" alt="Cellular Automata neighbourhood grids"  style="width: 50%"/>
+            </div>
+            <p>
+                A second way of handling the boundary condition is to use a reflective boundary
+                condition, in this case the lattice is reflected at the boundary. The below diagram demonstrates reflective boundary conditions on a one dimensional cellular automata.
+            </p>
+            <div class="figure">
+                <img src="images/reflective.png" alt="Cellular Automata neighbourhood grids"  style="width: 50%"/>
+            </div>
+            <p>
+                The third way we will consider is a periodic boundary condition. Extending a 2D
+                ellular automaton with periodic boundary conditions will result in a torus shape
+                eing produced. The image below demonstrates how periodic boundary conditions work
+                in a one dimensional cellular automaton.
+            </p>
+            <div class="figure">
+                <img src="images/periodic.png" alt="Cellular Automata neighbourhood grids"  style="width: 50%"/>
+            </div>
         </div>
     </div>
 </div>
