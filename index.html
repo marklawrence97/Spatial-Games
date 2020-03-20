@@ -33,7 +33,7 @@
                     <a href="#cellularAutomata">Cellular Automata</a>          
                 </li>
                 <li>
-                    <a href="#dilemma">Evolutionary Spatial Games</a>          
+                    <a href="#spatialGames">Evolutionary Spatial Games</a>          
                 </li>
             </ul>
         </div>
@@ -157,6 +157,63 @@
             </p>
             <div class="figure">
                 <img src="images/periodic.png" alt="Cellular Automata neighbourhood grids"  style="width: 50%"/>
+            </div>
+            <a name="spatialGames"></a>
+            <h2>
+                Evolutionary Spatial Games
+            </h2>
+            <p>
+                In evolutionary game theory there is an assumption that every individual has an equal chance of interacting with each other. When Robert May and Martin Nowak introduced the idea of evolutionary spatial games, they argued that assumption is an abstraction. In fact, it is more likely that an individual will interact with other individuals within their immediate neighbourhood. Using a cellular automata based model gives us a capacity to model this, giving us a spatial element to our evolutionary games.
+            </p>
+            <p>
+                Firstly, we define a round to be an iteration of the spatial game, and we define a game as a contest between two individuals within the population. Then we can outline the idea of a evolutionary spatial game, let all the individuals in a population be placed on a 2 dimensional spatial array, then each round every cell within the population will play a game with every individual in it’s immediate neighbourhood. The update rule is that each cell will be occupied by the strategy that had the highest payoff within the cell’s immediate neighbourhood, including itself. 
+            </p>
+            <p>
+                For an example lets considered a generalised payoff matrix of two strategies, A which will be represented by the colour blue and B which will be represented by the colour red.
+            </p>
+            <p>
+                Then we have the following payoff matrix:
+            </p>
+            <div class="figure">
+                <img src="images/general.png" alt="Cellular Automata neighbourhood grids"  style="width: 25%"/>
+            </div>
+            <p>
+                We must use 25 different cells to calculate the payoff for a single cell, the focal cell will then be updated to the strategy that 
+                had the highest payoff in it's immediate neighbourhood, this will depend on the values for a,b,c and d. Here is an example of how all the payoff values are calculated:
+            </p>
+            <div class="figure">
+                <img src="images/exampleGame.png" alt="Cellular Automata neighbourhood grids"  style="width: 55%"/>
+            </div>
+            <p>
+                We can then set the matrix to be a simplified version of the prisoner's dilemma:
+            </p>
+            <div class="figure">
+                <img src="images/prisonersMatrix.png" alt="Cellular Automata neighbourhood grids"  style="width: 30%"/>
+            </div>
+            <p>
+                For simplicity we will choose to set epsilon to be equal to zero, then by varying the value of b we can find some interesting results. Starting from a population of 90% cooperators, we find that when b changes from 1.15 to 1.7 we get the following results:
+            </p>
+            <div class="figure">
+                <img src="images/lowb.png" alt="Cellular Automata neighbourhood grids"  style="width: 80%"/>
+            </div>
+            <div class="figure">
+                <img src="images/medB.png" alt="Cellular Automata neighbourhood grids"  style="width: 79%"/>
+            </div>
+            <div class="figure">
+                <img src="images/highb.png" alt="Cellular Automata neighbourhood grids"  style="width: 80%"/>
+            </div>
+            <p>
+                In also of these examples we can see both strategies mutually coexisting.
+            </p>
+            <p>
+                We can also consider games where we have one defector invading an entire population of cooperators. By setting b = 1.65 
+                and neighbourhood condition to a Moore neighbourhood we find the following fractal pattern emerging.
+            </p>
+            <div class="figure">
+                <img src="images/kal1.png" alt="Cellular Automata neighbourhood grids"  style="width: 80%"/>
+            </div>
+            <div class="figure">
+                <img src="images/kal2.png" alt="Cellular Automata neighbourhood grids"  style="width: 80%"/>
             </div>
         </div>
     </div>
